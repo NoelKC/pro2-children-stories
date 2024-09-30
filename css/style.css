@@ -71,12 +71,24 @@ body {
    padding: 30px;
 }
 
+/* responsive content */
+@media screen and (max-width:550px) {
+   .content-wrapper {
+      padding: 10px;
+   }
+
+   .content-bg {
+      padding: 10px;
+   }
+}
+
 /* story-items */
 .story-item {
    transform: translateX(-250px);
    transition: opacity 1.5s, transform 1.5s;
-   margin: 30px 0;
+   margin: 20px 0;
    opacity: 0;
+   text-align: center;
 }
 
 .story-item.slide-in {
@@ -84,12 +96,25 @@ body {
    transform: translateX(0);
 }
 
-img.story-item{
+img.story-item {
    display: block;
    margin: auto;
    width: 500px;
    height: auto;
    margin-bottom: 20px;
+}
+
+/* responsive img story item  */
+@media screen and (max-width:650px) {
+   .story-item {
+      margin: 10px;
+   }
+
+   img.story-item {
+      height: auto;
+      width: 75%;
+      margin-bottom: 10px;
+   }
 }
 
 /* overlay text on images */
@@ -115,7 +140,6 @@ img.story-item{
 
 .overlay-text {
    color: white;
-   font-size: 20px;
    position: absolute;
    top: 50%;
    left: 50%;
@@ -137,6 +161,18 @@ img.story-item{
 
 .overlay-container:hover .overlay-image {
    opacity: 1;
+}
+
+/* this might make it work for mobile but idk have to test when published  */
+.overlay-container:active .overlay-image {
+   opacity: 1;
+}
+
+/* responsive  overlay*/
+@media screen and (min-width:700px) {
+   .main-text.overlay-text {
+      font-size: 5rem;
+   }
 }
 
 /* styles for text */
@@ -170,11 +206,16 @@ img.story-item{
 /* link styles */
 a {
    color: white;
-   cursor: pointer; 
+   cursor: pointer;
    text-decoration: none;
 }
 
 a:hover {
+   color: rgb(81, 220, 39);
+   opacity: 1;
+}
+
+a:active {
    color: rgb(81, 220, 39);
    opacity: 1;
 }
